@@ -1,0 +1,20 @@
+{% extends '_layout.html' %}
+
+{% block body %}
+    <h1>Register:</h1>
+    <form method="POST"action= '/registered'>
+        <p>Enter your name:</p>
+        <input type = "text" placeholder = "John Doe" name = 'fullname'>
+        <br>
+        <p>Select Organization:</p>
+        <select name="org">
+            <option>Key Club</option>
+            <option>Model UN</option>
+            <option>Org3</option>
+            <option>Org4</option>
+            <option>Org5</option>
+        </select>
+        <br>
+        <input type="submit" value = "Register">
+    </form>
+{% endblock %}

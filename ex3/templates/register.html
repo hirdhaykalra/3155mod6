@@ -1,0 +1,23 @@
+{% extends '_layout.html' %}
+<! https://stackoverflow.com/questions/14652325/python-dictionary-in-to-html-table  --- Jinja + tables and how to use them>
+{% block body %}
+<h1>Registered Students:</h1>
+<P> Here is the list of Registered Students and their Orgs:</P>
+<br>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Org</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for key, value in result.items() %} <! for loop to go thru the Dict>
+        <tr>
+            <td> {{ key }} </td>
+            <td> {{ value }} </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
